@@ -218,9 +218,9 @@ if !exists("*s:ActivatePyflakesQuickFixWindow")
 endif
 
 if !exists("*s:RunPyflakes")
-    function s:RunPyflakes()
-        highlight link PyFlakes SpellBad
+    highlight link PyFlakes SpellBad
 
+    function s:RunPyflakes()
         if exists("b:cleared")
             if b:cleared == 0
                 silent call s:ClearPyflakes()
